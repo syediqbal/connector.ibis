@@ -33,11 +33,6 @@
 	<artifactId>jboss-dmr</artifactId>
 	<version>1.0.0.Final</version>
 </dependency>
-             <dependency>
-  <groupId>net.minidev</groupId>
-  <artifactId>json-smart</artifactId>
-  <version>1.2</version>
- </dependency>
         <dependency>
             <groupId>javax.resource</groupId>
             <artifactId>connector-api</artifactId>

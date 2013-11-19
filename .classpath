@@ -36,14 +36,5 @@
 			<attribute name="maven.scope" value="provided"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/student/.m2/repository/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar">
-		<attributes>
-			<attribute name="maven.groupId" value="com.googlecode.json-simple"/>
-			<attribute name="maven.artifactId" value="json-simple"/>
-			<attribute name="maven.version" value="1.1"/>
-			<attribute name="maven.scope" value="provided"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/home/student/Downloads/quick-json-1.0.2.3.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -50,11 +50,9 @@ import org.teiid.resource.spi.BasicConnection;
  * 
  */
 public class IbisConnectionImpl extends BasicConnection {
-	private String server;
 	private HttpClient client = new DefaultHttpClient();
 	private IbisManagedConnectionFactory mcf;
 	private String url;
-	private int timeout = 10000;
 	// TODO make this a part of configuration file
 	private final String JSON_ROOT_NODE = "rows";
 
@@ -71,7 +69,7 @@ public class IbisConnectionImpl extends BasicConnection {
 			throws java.lang.Exception {
 
 		url = getURL(this.mcf.getEndPoint(), params);
-		String json = rsRequest(url, HttpMethod.GET, timeout);
+		String json = rsRequest(url, HttpMethod.GET, this.mcf.getTimeout());
 		// in case the server answers with 'no-content'
 
 		if (StringUtils.isEmpty(json)) {
@@ -104,7 +102,7 @@ public class IbisConnectionImpl extends BasicConnection {
 	private String rsRequest(String url, HttpMethod httpMethod, int timeout)
 			throws HttpException, ClientProtocolException, IOException {
 		LogManager.logInfo("Requesting {} with protocol {} on {}",
-				httpMethod.values() + " " + url);
+				httpMethod.name() + " " + url);
 
 		switch (httpMethod) {
 		case GET:
