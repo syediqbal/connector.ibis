@@ -1,4 +1,4 @@
-activeProfiles=
+activeProfiles=jboss-public-repository, jboss-eap-alpha, jboss-developer-repository
 eclipse.preferences.version=1
 resolveWorkspaceProjects=true
 version=1

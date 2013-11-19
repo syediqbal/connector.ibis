@@ -1,10 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" output="target/classes" path="src/main/java"/>
-	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources"/>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java"/>
-	<classpathentry kind="src" path="src/test/resources"/>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER"/>
 	<classpathentry kind="con" path="org.maven.ide.eclipse.MAVEN2_CLASSPATH_CONTAINER"/>
+	<classpathentry kind="lib" path="/tmp/eds/teiid/client/teiid-client.jar"/>
+	<classpathentry kind="lib" path="/tmp/eds/teiid/resources/runtime/deployers/teiid.deployer/teiid-api-7.7.5.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="/home/student/.m2/repository/org/apache/httpcomponents/httpcore/4.2.2/httpcore-4.2.2.jar">
+		<attributes>
+			<attribute name="maven.groupId" value="org.apache.httpcomponents"/>
+			<attribute name="maven.artifactId" value="httpcore"/>
+			<attribute name="maven.version" value="4.2.2"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/student/.m2/repository/org/apache/httpcomponents/httpclient/4.2.3/httpclient-4.2.3.jar">
+		<attributes>
+			<attribute name="maven.groupId" value="org.apache.httpcomponents"/>
+			<attribute name="maven.artifactId" value="httpclient"/>
+			<attribute name="maven.version" value="4.2.3"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="/teiid-engine"/>
+	<classpathentry kind="lib" path="/tmp/eds/teiid/resources/runtime/deployers/teiid.deployer/teiid-engine-7.7.5.jar"/>
+	<classpathentry kind="lib" path="/home/student/.m2/repository/org/codehaus/jettison/jettison/1.1/jettison-1.1.jar" sourcepath="/home/student/.m2/repository/org/codehaus/jettison/jettison/1.1/jettison-1.1-sources.jar">
+		<attributes>
+			<attribute name="maven.groupId" value="org.codehaus.jettison"/>
+			<attribute name="maven.artifactId" value="jettison"/>
+			<attribute name="maven.version" value="1.1"/>
+			<attribute name="maven.scope" value="provided"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/student/.m2/repository/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar">
+		<attributes>
+			<attribute name="maven.groupId" value="com.googlecode.json-simple"/>
+			<attribute name="maven.artifactId" value="json-simple"/>
+			<attribute name="maven.version" value="1.1"/>
+			<attribute name="maven.scope" value="provided"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/student/Downloads/quick-json-1.0.2.3.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
