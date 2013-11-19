@@ -59,20 +59,20 @@ public class IbisManagedConnectionFactory extends BasicManagedConnectionFactory 
 
 	@Override
 	public BasicConnectionFactory createConnectionFactory() throws ResourceException {
-		String configName = getConfigName();
-		if (configName == null) {
-			configName = IbisConnectionImpl.DEFAULT_LOCAL_NAME; 
-		}
-		this.portQName = new QName(IbisConnectionImpl.DEFAULT_NAMESPACE_URI, configName);
-		if (configFile != null) {
-			bus = new SpringBusFactory().createBus(configFile);
-			JaxWsClientFactoryBean instance = new JaxWsClientFactoryBean();
-			Configurer configurer = bus.getExtension(Configurer.class);
-	        if (null != configurer) {
-	            configurer.configureBean(portQName.toString() + ".jaxws-client.proxyFactory", instance); //$NON-NLS-1$
-	        }
-	        outInterceptors = instance.getOutInterceptors();
-		}
+//		String configName = getConfigName();
+//		if (configName == null) {
+//			configName = IbisConnectionImpl.DEFAULT_LOCAL_NAME; 
+//		}
+//		this.portQName = new QName(IbisConnectionImpl.DEFAULT_NAMESPACE_URI, configName);
+//		if (configFile != null) {
+//			bus = new SpringBusFactory().createBus(configFile);
+//			JaxWsClientFactoryBean instance = new JaxWsClientFactoryBean();
+//			Configurer configurer = bus.getExtension(Configurer.class);
+//	        if (null != configurer) {
+//	            configurer.configureBean(portQName.toString() + ".jaxws-client.proxyFactory", instance); //$NON-NLS-1$
+//	        }
+//	        outInterceptors = instance.getOutInterceptors();
+//		}
 		return new BasicConnectionFactory() {
 			@Override
 			public BasicConnection getConnection() throws ResourceException {
