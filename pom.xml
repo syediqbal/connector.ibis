@@ -33,35 +33,6 @@
 	<artifactId>jboss-dmr</artifactId>
 	<version>1.0.0.Final</version>
 </dependency>
-        <dependency>
-            <groupId>javax.resource</groupId>
-            <artifactId>connector-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.cxf</groupId>
-  			<artifactId>cxf-rt-frontend-jaxws</artifactId>
-  			<version>2.2.2</version>
-            <scope>provided</scope>        
-        </dependency>
-        <dependency>
-            <groupId>org.apache.cxf</groupId>
-  			<artifactId>cxf-rt-transports-http</artifactId>
-  			<version>2.2.2</version>
-            <scope>provided</scope>        
-        </dependency>
-        <dependency>
-            <groupId>org.apache.cxf</groupId>
-  			<artifactId>cxf-rt-ws-security</artifactId>
-  			<version>2.2.2</version>
-            <scope>provided</scope>        
-        </dependency>
-        <dependency>
-            <groupId>org.apache.cxf</groupId>
-  			<artifactId>cxf-rt-ws-policy</artifactId>
-  			<version>2.2.2</version>
-            <scope>provided</scope>        
-        </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
