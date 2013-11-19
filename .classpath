@@ -10,22 +10,6 @@
 	<classpathentry kind="lib" path="/tmp/eds/teiid/client/teiid-client.jar"/>
 	<classpathentry kind="lib" path="/tmp/eds/teiid/resources/runtime/deployers/teiid.deployer/teiid-api-7.7.5.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="/home/student/.m2/repository/org/apache/httpcomponents/httpcore/4.2.2/httpcore-4.2.2.jar">
-		<attributes>
-			<attribute name="maven.groupId" value="org.apache.httpcomponents"/>
-			<attribute name="maven.artifactId" value="httpcore"/>
-			<attribute name="maven.version" value="4.2.2"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/home/student/.m2/repository/org/apache/httpcomponents/httpclient/4.2.3/httpclient-4.2.3.jar">
-		<attributes>
-			<attribute name="maven.groupId" value="org.apache.httpcomponents"/>
-			<attribute name="maven.artifactId" value="httpclient"/>
-			<attribute name="maven.version" value="4.2.3"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="src" path="/teiid-engine"/>
 	<classpathentry kind="lib" path="/tmp/eds/teiid/resources/runtime/deployers/teiid.deployer/teiid-engine-7.7.5.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
