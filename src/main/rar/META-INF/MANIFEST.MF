@@ -3,4 +3,4 @@ Built-By: jmarley
 Build-Jdk: 1.6.0_24
 Created-By: Apache Maven
 Archiver-Version: Plexus Archiver
-Dependencies: org.jboss.teiid.common-core,org.jboss.teiid.api,javax.api
+Dependencies: org.teiid.resource.spi

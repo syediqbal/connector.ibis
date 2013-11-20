@@ -169,7 +169,6 @@ public class IbisConnectionImpl extends BasicConnection {
 		return node;
 	}
 	
-	@Override
 	public void close() throws ResourceException {
 		// TODO Auto-generated method stub
 
