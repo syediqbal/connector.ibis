@@ -38,7 +38,6 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.teiid.logging.LogManager;
 import org.jboss.dmr.ModelNode;
 import org.jboss.teiid.resource.adaptor.ibis.IbisManagedConnectionFactory;
-import org.jboss.teiid.translator.ibis.IbisConnection;
 import org.teiid.resource.spi.BasicConnection;
 
 /**
@@ -50,7 +49,7 @@ import org.teiid.resource.spi.BasicConnection;
  * @author student
  * 
  */
-public class IbisConnectionImpl extends BasicConnection implements IbisConnection {
+public class IbisConnectionImpl extends BasicConnection {
 	private HttpClient client = new DefaultHttpClient();
 	private IbisManagedConnectionFactory mcf;
 	private String url;
@@ -70,7 +69,7 @@ public class IbisConnectionImpl extends BasicConnection implements IbisConnectio
 			throws java.lang.Exception {
 
 		url = getURL(this.mcf.getEndPoint(), params);
-		String json = rsRequest(url, HttpMethod.GET);
+		String json = rsRequest(url, HttpMethod.GET, this.mcf.getTimeout());
 		// in case the server answers with 'no-content'
 
 		if (StringUtils.isEmpty(json)) {
@@ -100,15 +99,14 @@ public class IbisConnectionImpl extends BasicConnection implements IbisConnectio
 		return docs;
 	}
 	
-	//TODO: add timeout param
-	private String rsRequest(String url, HttpMethod httpMethod)
+	private String rsRequest(String url, HttpMethod httpMethod, int timeout)
 			throws HttpException, ClientProtocolException, IOException {
 		LogManager.logInfo("Requesting {} with protocol {} on {}",
 				httpMethod.name() + " " + url);
 
 		switch (httpMethod) {
 		case GET:
-			return getResponse(url);
+			return getResponse(url, timeout);
 		default:
 			throw new HttpException("Unexpected HTTP method {0} "
 					+ httpMethod.toString());
@@ -119,14 +117,14 @@ public class IbisConnectionImpl extends BasicConnection implements IbisConnectio
 	/**
 	 * description: takes a url and makes a rest call then gets the json back
 	 * and parses that into a string
-	 * TODO add timeout config
+	 * 
 	 * @param url
 	 * @param timeout
 	 * @return String
 	 * @throws ClientProtocolException
 	 * @throws IOException
 	 */
-	private String getResponse(String url)
+	private String getResponse(String url, int timeout)
 			throws ClientProtocolException, IOException {
 
 		HttpGet request = new HttpGet(url);

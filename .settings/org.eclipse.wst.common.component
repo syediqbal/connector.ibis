@@ -79,10 +79,10 @@
         <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/wsdl4j/wsdl4j/1.6.2/wsdl4j-1.6.2.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/teiid/teiid-api/7.7.5/teiid-api-7.7.5.jar">
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/teiid/teiid-api/7.7.0.Final/teiid-api-7.7.0.Final.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/teiid/teiid-common-core/7.7.5/teiid-common-core-7.7.5.jar">
+        <dependent-module deploy-path="/" handle="module:/classpath/var/M2_REPO/org/jboss/teiid/teiid-common-core/7.7.0.Final/teiid-common-core-7.7.0.Final.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/connector.ibis/target/classes"/>
